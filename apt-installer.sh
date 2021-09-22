@@ -1,15 +1,10 @@
-#switch to root
-if ["$EUID" -ne 0]
-then su
-fi
-
 #make folder for instalation
 [ ! -d "opt/plcnext/apt_installer" ] && mkdir /opt/plcnext/apt_installer
 
 #go to folder
 cd /opt/plcnext/apt_installer
 
-sed -i -e 's/FAIL_DELAY              3/#FAIL_DELAY              3/' /etc/login.defs
+sed -i -e 's/FAIL_DELAY/#FAIL_DELAY/' /etc/login.defs
 
 #begin install adduser + dependencies
 wget http://ftp.de.debian.org/debian/pool/main/g/gcc-10/gcc-10-base_10.2.1-6_armel.deb
