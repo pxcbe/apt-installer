@@ -287,8 +287,6 @@ deb-src [trusted=yes] http://deb.debian.org/debian-security/ bullseye-security m
 deb [trusted=yes] http://deb.debian.org/debian bullseye-updates main contrib non-free
 deb-src [trusted=yes] http://deb.debian.org/debian bullseye-updates main contrib non-free" > /etc/apt/sources.list
 
-apt update
-
 df -h
 
 exit 1
