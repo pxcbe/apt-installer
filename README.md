@@ -8,7 +8,7 @@ sudo passwd root
 ```
 
 Next download the .sh file and put it on the PLCnext using WinSCP. The directory i used is /opt/plcnext.
-The directory where the .deb files will be placed during the install is /opt/plcnext/apt_installer, this can be changed in the script using the built-in linux text editor or any other tect editor on your computer (notepad++, notepad,...).
+The directory where the .deb files will be placed during the install is /opt/plcnext/apt_installer, this can be changed in the script using the built-in linux text editor or any other text editor on your computer (notepad++, notepad,...).
 
 ## running the script
 To run the script make it avalable as an executable using this comand in the folder where the script is located: 
@@ -19,9 +19,9 @@ After this run the following comand also in the folder where the script is locat
 ```
 sed -i 's/\r$//' apt-installer.sh
 ```
-this changed the carrage returns in the file to enters the system can unserstand.
+This changed the carrage returns in the file to enters the system can understand.
 
-Next call the scrip and let it do it's thing using:
+Next call the script and let it do it's thing using:
 ```
 bash apt-installer.sh 
 ```
@@ -45,4 +45,4 @@ After you run these comands use:
 ```
 apt install Name_off_package
 ```
-To make sure the instalation is done and valid.
+To make sure the installation is done and valid.
