@@ -1,7 +1,7 @@
 # apt-installer
 ### An 8 gb - PLCnext SD card is recomended and an internet connection is required.
 ## Adding root rights
-To get root login on the plcnext use the following command and follow the instructions on screen.
+To get root login on the PLCnext connect to the PLC using ssh and log in as admin then use the following command and follow the instructions on screen.
 
 ```
 sudo passwd root
@@ -11,6 +11,7 @@ Next download the .sh file and put it on the PLCnext using WinSCP. The directory
 The directory where the .deb files will be placed during the install is /opt/plcnext/apt_installer, this can be changed in the script using the built-in linux text editor or any other text editor on your computer (notepad++, notepad,...).
 
 ## running the script
+Connect to the PLC using ssh and login as admin the switch to the root user we made before.
 To run the script make it avalable as an executable using this comand in the folder where the script is located: 
 ```
 chmod 755 apt-installer.sh
