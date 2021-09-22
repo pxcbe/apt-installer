@@ -7,11 +7,11 @@ To get root login on the plcnext use the following command and follow the instru
 sudo passwd root
 ```
 
-Next download the .sh file and put it on the plc using WinSCP. The directory i used is /opt/plcnext
-The directory where the .deb files will be placed during the install is /opt/plcnext/apt_installer, this can be changed in the script using the built in linux text editor or any other editor on your computer.
+Next download the .sh file and put it on the PLCnext using WinSCP. The directory i used is /opt/plcnext.
+The directory where the .deb files will be placed during the install is /opt/plcnext/apt_installer, this can be changed in the script using the built-in linux text editor or any other tect editor on your computer (notepad++, notepad,...).
 
 ## running the script
-To run the script make it avalable for execute using in the folder where the script is located: 
+To run the script make it avalable as an executable using this comand in the folder where the script is located: 
 ```
 chmod 755 apt-installer.sh
 ```
@@ -19,7 +19,7 @@ After this run the following comand also in the folder where the script is locat
 ```
 sed -i 's/\r$//' apt-installer.sh
 ```
-this changed the carrage returns in the file to enters the system can unserstand. \n
+this changed the carrage returns in the file to enters the system can unserstand.
 
 Next call the scrip and let it do it's thing using:
 ```
