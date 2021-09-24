@@ -1,8 +1,6 @@
 # apt-installer
 ### An 8 gb - PLCnext SD card is recomended and an internet connection is required.
-```diff
 ### - !!!!! DISCLIAMER INSTALLING APT IS NOT ENDORSED OR SUPPORTED BY PHOENIX CONTACT, USE AT YOUR OWN RISK !!!!!
-```
 ## Adding root rights
 To get root login on the PLCnext connect to the PLC using ssh and log in as admin then use the following command and follow the instructions on screen.
 
