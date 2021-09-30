@@ -22,9 +22,18 @@ dpkg --force-all -i libcrypt1_4.4.18-4_armel.deb
 wget http://ftp.de.debian.org/debian/pool/main/g/glibc/libc6_2.31-13_armel.deb
 dpkg --force-all -i libc6_2.31-13_armel.deb
 
+
 dpkg --configure libgcc-s1_10.2.1-6_armel
 dpkg --configure libcrypt1_4.4.18-4_armel
+#pause install adduser
 
+
+#begin install libc-bin to mitigate errors
+wget http://ftp.de.debian.org/debian/pool/main/g/glibc/libc-bin_2.31-13_armel.deb
+dpkg -i libc-bin_2.31-13_armel.deb
+#end install libc-bin to mitigate errors
+
+#continue install adduser
 wget http://ftp.de.debian.org/debian/pool/main/e/e2fsprogs/libcom-err2_1.46.2-2_armel.deb
 dpkg -i libcom-err2_1.46.2-2_armel.deb
 
@@ -163,6 +172,12 @@ dpkg -i adduser_3.118_all.deb
 #end install adduser
 
 
+#begin install init-system-helpers
+wget http://ftp.de.debian.org/debian/pool/main/i/init-system-helpers/init-system-helpers_1.60_all.deb
+dpkg -i init-system-helpers_1.60_all.deb
+#end install init-system-helpers
+
+
 #begin install keyring
 wget http://ftp.de.debian.org/debian/pool/main/d/debian-archive-keyring/debian-archive-keyring_2021.1.1_all.deb
 dpkg -i debian-archive-keyring_2021.1.1_all.deb
@@ -273,6 +288,7 @@ dpkg -i apt_2.2.4_armel.deb
 #end install APT
 
 
+#add the libraries for APT
 echo "deb [trusted=yes] http://deb.debian.org/debian bullseye main contrib non-free
 deb-src [trusted=yes] http://deb.debian.org/debian bullseye main contrib non-free
 
@@ -282,6 +298,11 @@ deb-src [trusted=yes] http://deb.debian.org/debian-security/ bullseye-security m
 deb [trusted=yes] http://deb.debian.org/debian bullseye-updates main contrib non-free
 deb-src [trusted=yes] http://deb.debian.org/debian bullseye-updates main contrib non-free" > /etc/apt/sources.list
 
+
+#update the package lists in the PLCnext
+apt update
+
+#show the avalable disk space on the plc
 df -h
 
 exit 1
