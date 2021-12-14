@@ -19,8 +19,8 @@ wget http://ftp.de.debian.org/debian/pool/main/libx/libxcrypt/libcrypt1_4.4.18-4
 dpkg --force-all -i libcrypt1_4.4.18-4_armel.deb
 
 
-wget http://ftp.de.debian.org/debian/pool/main/g/glibc/libc6_2.31-13_armel.deb
-dpkg --force-all -i libc6_2.31-13_armel.deb
+wget http://ftp.de.debian.org/debian/pool/main/g/glibc/libc6_2.31-13+deb11u2_armel.deb
+dpkg --force-all -i libc6_2.31-13+deb11u2_armel.deb
 
 
 dpkg --configure libgcc-s1_10.2.1-6_armel
