@@ -8,8 +8,9 @@ To get root login on the PLCnext connect to the PLC using ssh and log in as admi
 sudo passwd root
 ```
 
-```
 After setting the password, login as root user using
+
+```
 su root
 ```
 
