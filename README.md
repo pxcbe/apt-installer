@@ -8,6 +8,11 @@ To get root login on the PLCnext connect to the PLC using ssh and log in as admi
 sudo passwd root
 ```
 
+```
+After setting the password, login as root user using
+su root
+```
+
 Next download the .sh file and put it on the PLCnext using WinSCP. The directory i used is /opt/plcnext.
 The directory where the .deb files will be placed during the install is /opt/plcnext/apt_installer, this can be changed in the script using the built-in linux text editor or any other text editor on your computer (notepad++, notepad,...).
 
